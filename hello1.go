@@ -1,6 +1,12 @@
 package main
 
-import "fmt"
+// go run hello.go
+
+import (
+	"fmt"
+	//"time"
+	//"math/rand"
+)
 
 func main() {
 
@@ -11,7 +17,7 @@ func main() {
 
 	for {
 
-		fmt.Print("Convert: (1) C→F  (2) F→C  (0) Quit: ")
+		fmt.Print("Convert: (1) C → F  (2) F → C  (0) Quit: ")
 		fmt.Scan(&input)
 
 		if input == 0 {
@@ -23,7 +29,6 @@ func main() {
 			fmt.Scan(&numToConvert)
 
 			numF := toFahrenheit(numToConvert)
-
 			conversions++
 
 			formatOutput(numToConvert, numF, true)
@@ -31,13 +36,10 @@ func main() {
 
 			fmt.Print("Enter temperature in Fahrenheit (°F): ")
 			fmt.Scan(&numToConvert)
-
 			numC := toCelsius(numToConvert)
-
 			conversions++
 
 			formatOutput(numC, numToConvert, false)
-
 		} else {
 			fmt.Println("Incorrect input. Please try again!")
 		}
